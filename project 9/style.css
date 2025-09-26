@@ -1,0 +1,34 @@
+h3 {
+    color: rgb(187, 124, 52);
+    font-family:inherit;
+}
+
+/*external css*/
+
+p {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(117, 28, 28)
+}
+
+#myid {
+    font-style: normal;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(144, 40, 142)
+}
+
+.myclass {
+    font-family: serif;
+    color: rgb(41, 109, 8)
+}
+
+h4,
+h5 {
+    font-family:fantasy;
+    color: rgba(36, 36, 159, 0.516)
+}
+
+* {
+    background-color: rgb(173, 156, 130);
+}
