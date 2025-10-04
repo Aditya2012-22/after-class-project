@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 40px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #fff3cd;
+            /* Content area color */
+            border: 5px solid #ffc107;
+            /* Border */
+            padding: 30px;
+            /* Space inside the box */
+            margin: 40px auto;
+            /* Space outside the box */
+            width: 300px;
+            /* Fixed width */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Box Model Example</h2>
+    <p>The box below shows how margin, border, padding, and content work together in the CSS box model.</p>
+
+    <div class="box">
+        <h3>Inside the Box</h3>
+        <p>This is the content area.
+            <br><br>
+            🔸 <strong>Padding</strong> adds space inside the border.
+            <br>
+            🔸 <strong>Border</strong> surrounds the padding and content.
+            <br>
+            🔸 <strong>Margin</strong> adds space outside the box.
+        </p>
+    </div>
+
+</body>
+
+</html>
