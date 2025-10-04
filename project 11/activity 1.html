@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Cascading Effect Example</title>
+
+  <style>
+    /* External/Internal style */
+    p {
+      color: blue;       /* This will be overridden by inline style */
+      font-size: 18px;
+    }
+
+    .highlight {
+      color: green;      /* Class selector */
+      font-weight: bold;
+    }
+
+    #unique {
+      color: orange;     /* ID selector has higher priority than class */
+    }
+
+    /* Later style overrides earlier ones */
+    p {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Cascading Effect</h1>
+  <p>This paragraph uses the default paragraph style (blue color).</p>
+
+  <p class="highlight">This paragraph uses a class selector (green text, bold).</p>
+
+  <p id="unique">This paragraph uses an ID selector (orange text, overrides class).</p>
+
+  <p style="color: red; font-size: 22px;">This paragraph uses an inline style (red text, highest priority).</p>
+
+  <p>
+    Notice how CSS applies rules in order:  
+    1. Inline styles > 2. ID selectors > 3. Class selectors > 4. Element selectors.
+    This is why the last paragraph appears red even though other rules exist.
+  </p>
+
+</body>
+</html>
