@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Values with DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        code {
+            background: #f2f2f2;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #f2f2f2;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Accessing Values with DOM</h1>
+
+    <p>The DOM (Document Object Model) allows JavaScript to interact with HTML elements. Below are the main ways to
+        access values using the DOM.</p>
+
+    <h2>1. Accessing an Element by ID</h2>
+    <pre><code>const title = document.getElementById("title").innerText;</code></pre>
+
+    <h2>2. Accessing Elements by Class</h2>
+    <pre><code>const items = document.getElementsByClassName("item");
+console.log(items[0].innerText);</code></pre>
+
+    <h2>3. Using Query Selector</h2>
+    <pre><code>const button = document.querySelector("#btn");
+const firstItem = document.querySelector(".item");</code></pre>
+
+    <h2>4. Accessing Input Values</h2>
+    <pre><code>const inputValue = document.getElementById("userInput").value;</code></pre>
+
+    <h2>Demo Example</h2>
+    <p>Below is a small demo to show how values can be accessed.</p>
+
+    <input type="text" id="userInput" placeholder="Type something..." />
+    <button onclick="showValue()">Show Value</button>
+
+    <p id="display"></p>
+
+    <script>
+        function showValue() {
+            const value = document.getElementById('userInput').value;
+            document.getElementById('display').innerText = "You typed: " + value;
+        }
+    </script>
+</body>
+
+</html>
