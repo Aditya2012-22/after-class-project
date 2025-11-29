@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .box {
+            margin: 80px auto;
+            width: 350px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            background: #00c6ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Error Handling + Arrow Function</h2>
+
+        <button onclick="runTest()">Run Code</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const product = (a, b) => a * b;
+
+        function runTest() {
+            try {
+                // Intentional error (variable 'a' not declared)
+                document.getElementById("result").innerHTML = a;
+            }
+            catch (err) {
+                document.getElementById("result").innerHTML =
+                    "⚠️ " + err.message;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
