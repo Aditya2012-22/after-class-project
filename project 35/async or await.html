@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Asynchronous Function</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        h2 {
+            text-shadow: 0 0 10px cyan;
+        }
+
+        #result {
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript async / await</h2>
+    <h1 id="result">Calculating...</h1>
+
+    <script>
+        async function product(a, b) {
+            // Returning a Promise directly without setTimeout
+            let response = await (a * b);
+            display(response);
+        }
+
+        function display(result) {
+            document.getElementById("result").innerHTML = result;
+        }
+
+        product(5, 20);
+    </script>
+</body>
+
+</html>
