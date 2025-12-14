@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+                body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* Modern gradient background */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+                form {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 25px 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        input, button {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+            background: #71ffb0;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return validateForm();">
+        Name: <input type="text" name="fname"><br><br>
+        Age: <input type="number" name="age" min="18"><br><br>
+        <input type="submit" value="Login">
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            var y = document.forms["myForm"]["age"].value;
+
+            if (x === "" || y === "") {
+                alert("Name / Age cannot be empty");
+                return false;
+            } else {
+                alert("Successfully logged in");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
