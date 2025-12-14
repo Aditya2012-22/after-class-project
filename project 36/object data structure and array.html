@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #00eaff;
+        }
+
+        #output {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript Objects Data Structure and Array</h2>
+    <p id="output"></p>
+
+    <script>
+        var student = {
+            name: "Riya",
+            age: 12,
+            grade: 7,
+            hobbies: "Drawing",
+            fav_sport: "Cricket"
+        };
+
+        var colors = ["white", "black", "red", "green", "blue"];
+
+        var text = "";
+        text += "Student name is: " + student.name + "<br>";
+        text += "Student favorite sport is: " + student.fav_sport + "<br><br>";
+        text += "Before popping colors: " + colors.join(", ") + "<br>";
+        text += "My favorite color is: " + colors[3] + "<br>";
+
+        colors.pop();
+
+        text += "After popping colors: " + colors.join(", ");
+
+        document.getElementById("output").innerHTML = text;
+    </script>
+</body>
+
+</html>
