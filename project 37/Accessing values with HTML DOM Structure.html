@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="demo">DOM Structure</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00c6ff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: black;
+        }
+
+        button:hover {
+            background-color: #00aaff;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Adding JS as separate file and assigning value from one node to other</p>
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
