@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank App</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/010/518/831/large_2x/digital-finance-and-banking-investment-service-in-futuristic-background-bank-building-with-online-growth-graph-investment-secure-money-and-financial-innovation-technology-vector.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 80px;
+            color: white;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .credit {
+            background: #4CAF50;
+        }
+
+        .debit {
+            background: #f44336;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Bank App</h2>
+
+        <input id="amount" type="number" placeholder="Enter Amount"><br>
+
+        <button class="credit" onclick="credit()">Credit</button>
+        <button class="debit" onclick="debit()">Debit</button>
+
+        <p id="balanceBox">Balance : Rs.0</p>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function credit() {
+            balance += Number(amount.value);
+            balanceBox.innerHTML = "Balance : Rs." + balance;
+        }
+
+        function debit() {
+            if (balance >= Number(amount.value)) {
+                balance -= Number(amount.value);
+                balanceBox.innerHTML = "Balance : Rs." + balance;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
